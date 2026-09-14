@@ -1,0 +1,32 @@
+/* CCAD — Feuille de style des documents imprimables (fiches, reçus, rapports). */
+body.print-body { background: var(--grey-100); margin: 0; padding: 24px; font-family: var(--font-body); color: var(--text-body); }
+.print-toolbar { max-width: 794px; margin: 0 auto 14px; display: flex; justify-content: flex-end; gap: 8px; }
+.print-sheet { max-width: 794px; margin: 0 auto; background: #fff; box-shadow: var(--shadow-md); padding: 40px; border-radius: var(--radius-md); }
+.print-sheet--narrow { max-width: 320px; padding: 16px; }
+.print-head { display: flex; align-items: center; gap: 14px; padding-bottom: 18px; border-bottom: 2px solid var(--navy-700); margin-bottom: 20px; }
+.print-head img { width: 56px; height: 56px; border-radius: var(--radius-sm); object-fit: cover; }
+.print-head__org { font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--navy-900); }
+.print-head__sub { font-size: 11px; color: var(--text-muted); }
+.print-head__doc { margin-left: auto; text-align: right; }
+.print-head__doc-title { font-size: 14px; font-weight: 700; color: var(--navy-700); text-transform: uppercase; letter-spacing: .04em; }
+.print-head__doc-ref { font-family: var(--font-numeric); font-size: 12px; color: var(--text-muted); }
+.print-section-title { font-size: 13px; font-weight: 700; color: var(--navy-700); text-transform: uppercase; letter-spacing: .04em; margin: 20px 0 10px; }
+.print-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px 24px; font-size: 12px; }
+.print-grid--3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.print-grid dt { color: var(--text-muted); }
+.print-grid dd { margin: 0; font-family: var(--font-numeric); color: var(--text-body); }
+.print-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 8px; }
+.print-table th { text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: .04em; color: var(--text-muted); border-bottom: 1px solid var(--border-default); padding: 6px 8px; }
+.print-table td { padding: 6px 8px; border-bottom: 1px solid var(--border-subtle); }
+.print-table td.num, .print-table th.num { text-align: right; font-family: var(--font-numeric); }
+.print-signatures { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; margin-top: 40px; }
+.print-signature { border-top: 1px solid var(--grey-500); padding-top: 6px; font-size: 11px; color: var(--text-muted); text-align: center; }
+.print-footer { margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--border-subtle); font-size: 10px; color: var(--text-faint); text-align: center; }
+.print-note { font-size: 11px; color: var(--text-muted); margin-top: 14px; }
+.print-amount { font-family: var(--font-numeric); font-size: 30px; font-weight: 700; color: var(--navy-700); text-align: center; margin: 16px 0; }
+@media print {
+  body.print-body { background: #fff; padding: 0; }
+  .print-toolbar { display: none; }
+  .print-sheet { box-shadow: none; margin: 0 auto; }
+  @page { size: A4; margin: 12mm; }
+}

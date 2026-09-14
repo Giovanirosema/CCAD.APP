@@ -1,0 +1,89 @@
+/* =====================================================================
+   CCAD — Jetons de conception (design tokens)
+   Extraits du système de conception « CCADDesignSystem » — Gestion Interne CCAD
+   ===================================================================== */
+:root {
+  /* Couleurs de marque — bleu marine institutionnel + accent or */
+  --navy-050:#eef2fb; --navy-100:#dde4f5; --navy-200:#bbc8e9; --navy-300:#8298d6;
+  --navy-400:#4c68bd; --navy-500:#2846a6; --navy-600:#1a3489; --navy-700:#12276e;
+  --navy-800:#0c1a52; --navy-900:#080f38;
+
+  --gold-100:#faf1de; --gold-200:#f2e0bf; --gold-300:#e6c692; --gold-400:#d7ab61;
+  --gold-500:#c4923f; --gold-600:#9c7024; --gold-700:#7d5717;
+
+  --grey-050:#f7f8fb; --grey-100:#eef0f6; --grey-200:#e0e4ed; --grey-300:#c9cedb;
+  --grey-400:#a3aab9; --grey-500:#7a8296; --grey-600:#565e72; --grey-700:#3a4152;
+  --grey-800:#242a38; --grey-900:#141821;
+
+  --green-100:#dff2e8; --green-500:#248257; --green-600:#1c6b46;
+  --red-100:#fbe1e1;   --red-500:#c62c2c;   --red-600:#a32020;
+  --amber-100:#fbeed2; --amber-500:#c08009; --amber-600:#9a6408;
+  --info-100:#dceefa;  --info-500:#2277ad;  --info-600:#1a5c8a;
+  --white:#ffffff;
+
+  /* Rôles sémantiques */
+  --brand-primary:var(--navy-700); --brand-primary-hover:var(--navy-800); --brand-primary-active:var(--navy-900);
+  --brand-accent:var(--gold-500);  --brand-accent-hover:var(--gold-600);
+
+  --surface-page:var(--grey-050); --surface-card:var(--white); --surface-sunken:var(--grey-100);
+  --surface-brand:var(--navy-700); --surface-brand-soft:var(--navy-050); --surface-accent-soft:var(--gold-100);
+
+  --text-heading:var(--navy-900); --text-body:var(--grey-800); --text-muted:var(--grey-600);
+  --text-faint:var(--grey-500);   --text-on-brand:var(--white);  --text-on-accent:var(--navy-900);
+  --text-link:var(--navy-600);    --text-link-hover:var(--navy-800);
+
+  --border-subtle:var(--grey-200); --border-default:var(--grey-300);
+  --border-strong:var(--grey-400); --border-brand:var(--navy-600); --border-focus:var(--navy-500);
+
+  --status-success-bg:var(--green-100); --status-success-fg:var(--green-600);
+  --status-danger-bg:var(--red-100);    --status-danger-fg:var(--red-600);
+  --status-warning-bg:var(--amber-100); --status-warning-fg:var(--amber-600);
+  --status-info-bg:var(--info-100);     --status-info-fg:var(--info-600);
+  --status-neutral-bg:var(--grey-100);  --status-neutral-fg:var(--grey-600);
+
+  --overlay-scrim:rgba(8,15,56,.48);
+  --focus-ring:0 0 0 3px rgba(40,70,166,.28);
+
+  /* Typographie */
+  --font-sans:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-serif:"Lora",Georgia,"Times New Roman",serif;
+  --font-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --font-body:var(--font-sans); --font-display:var(--font-serif); --font-numeric:var(--font-mono);
+
+  --fs-micro:11px; --fs-caption:12px; --fs-body-sm:13px; --fs-body:14px; --fs-body-lg:16px;
+  --fs-h4:16px; --fs-h3:19px; --fs-h2:24px; --fs-h1:32px; --fs-display:44px;
+
+  --fw-light:300; --fw-regular:400; --fw-medium:500; --fw-semibold:600; --fw-bold:700; --fw-extrabold:800;
+
+  --lh-tight:1.15; --lh-snug:1.3; --lh-normal:1.5; --lh-loose:1.65;
+  --ls-display:-0.02em; --ls-heading:-0.01em; --ls-body:0; --ls-label:0.02em; --ls-eyebrow:0.12em;
+
+  /* Espacement */
+  --space-0:0; --space-1:2px; --space-2:4px; --space-3:6px; --space-4:8px; --space-5:12px;
+  --space-6:16px; --space-7:20px; --space-8:24px; --space-9:32px; --space-10:40px;
+  --space-11:48px; --space-12:64px; --space-13:80px;
+
+  --gutter-field:12px; --gutter-card:20px; --gutter-section:32px; --page-pad:24px;
+
+  /* Rayons */
+  --radius-none:0; --radius-xs:3px; --radius-sm:5px; --radius-md:8px; --radius-lg:12px; --radius-xl:16px;
+  --radius-pill:999px; --radius-circle:50%;
+  --radius-control:var(--radius-sm); --radius-card:var(--radius-md); --radius-badge:var(--radius-pill); --radius-modal:var(--radius-lg);
+
+  /* Ombres */
+  --shadow-none:none;
+  --shadow-xs:0 1px 1px rgba(12,26,82,.05);
+  --shadow-sm:0 1px 2px rgba(12,26,82,.07),0 1px 3px rgba(12,26,82,.05);
+  --shadow-md:0 2px 4px rgba(12,26,82,.06),0 6px 14px rgba(12,26,82,.08);
+  --shadow-lg:0 10px 28px rgba(12,26,82,.14);
+  --shadow-inset:inset 0 1px 2px rgba(12,26,82,.08);
+
+  /* Mouvement */
+  --dur-instant:80ms; --dur-fast:140ms; --dur-base:200ms; --dur-slow:320ms;
+  --ease-standard:cubic-bezier(.2,0,.2,1); --ease-out:cubic-bezier(0,0,.2,1); --ease-in:cubic-bezier(.4,0,1,1);
+  --transition-control:background-color var(--dur-fast) var(--ease-standard),border-color var(--dur-fast) var(--ease-standard),color var(--dur-fast) var(--ease-standard),box-shadow var(--dur-fast) var(--ease-standard);
+
+  /* Dimensions de mise en page */
+  --sidebar-w:248px; --sidebar-w-collapsed:64px; --topbar-h:60px; --content-max:1280px; --form-col:520px;
+  --control-h-sm:30px; --control-h-md:38px; --control-h-lg:46px;
+}

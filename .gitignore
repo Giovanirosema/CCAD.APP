@@ -1,0 +1,11 @@
+# Environnement local
+.env
+config/local.php
+
+# Fichiers téléversés (photos d'assurés)
+assets/uploads/*
+!assets/uploads/assures/.gitkeep
+
+# Divers
+.DS_Store
+*.log
