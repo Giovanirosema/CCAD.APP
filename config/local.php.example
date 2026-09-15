@@ -1,0 +1,10 @@
+<?php
+/**
+ * Configuration locale — copier ce fichier en "local.php" (même dossier)
+ * et renseigner les vraies valeurs. "local.php" n'est jamais suivi par git.
+ */
+
+putenv('CCAD_DB_HOST=127.0.0.1');
+putenv('CCAD_DB_NAME=ccad_gestion');
+putenv('CCAD_DB_USER=ccad_app');
+putenv('CCAD_DB_PASS=change-me');

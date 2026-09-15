@@ -3,7 +3,15 @@
  * Configuration de l'application — Gestion interne CCAD.
  * Copier ce fichier en dehors du dépôt de code en production et
  * renseigner les identifiants réels via variables d'environnement.
+ *
+ * Sur un poste sans accès facile aux variables d'environnement (ex. XAMPP/WampServer),
+ * copier config/local.php.example vers config/local.php et y renseigner les valeurs :
+ * ce fichier n'est jamais suivi par git et prend le pas sur les valeurs par défaut ci-dessous.
  */
+
+if (file_exists(__DIR__ . '/local.php')) {
+    require __DIR__ . '/local.php';
+}
 
 define('DB_HOST', getenv('CCAD_DB_HOST') ?: '127.0.0.1');
 define('DB_NAME', getenv('CCAD_DB_NAME') ?: 'ccad_gestion');
